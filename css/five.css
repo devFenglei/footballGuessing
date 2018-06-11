@@ -1,0 +1,47 @@
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.container5{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: url('../img/five/bg.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+.logo{
+    width: 2.07rem;
+    height:0.78rem;
+    margin: 0.78rem auto 0;
+    background: url('../img/first/logo.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+.game5{
+    width: 3.89rem;
+    height: 1.38rem;
+    margin: 0.93rem auto 0;
+    background: url('../img/five/game.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+.text5{
+    width: 4.25rem;
+    height: 0.37rem;
+    margin: -0.08rem auto 0;
+    background: url('../img/five/text.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+.code5{
+    width: 1.70rem;
+    height: 2.04rem;
+    margin: 0.4rem auto 0;
+    background: url('../img/five/code.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+.tel5{
+    width: 3.89rem;
+    height: 1.1rem;
+    margin: 0.35rem auto 0;
+    background: url('../img/five/tel.png') no-repeat center center;
+    background-size: 100% 100%;
+}
