@@ -53,7 +53,7 @@ $(function(){
             alert('请您完善电话号码！');
         }else{
             $.ajax({
-                url: 'http://120.78.68.167:8080/man/update',
+                url: 'http://120.78.68.167:8080/man/update?t='+new Date().getTime(),
                 type: 'get',
                 dataType: 'json',
                 data: {
