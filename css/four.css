@@ -26,16 +26,41 @@ body,html{
 }
 .schoose{
     position: relative;
-    width: 2.16rem;
+    width: 3.86rem;
     height: 0.73rem;
     margin: 0.12rem auto 0;
-    background: url('../img/four/choose.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+.left-choose{
+    position: relative;
+    width: 0.67rem;
+    height: 0.57rem;
+    margin-left: 0.33rem;
+    float: left;
+    background: url('../img/four/choose-left-bg.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+.vs{
+    width: 0.62rem;
+    height: 0.57rem;
+    margin-left: 0.7rem;
+    float: left;
+    background: url('../img/four/vs-bg.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+.right-choose{
+    position: relative;
+    width: 0.67rem;
+    height: 0.57rem;
+    margin-left: 0.6rem;
+    float: left;
+    background: url('../img/four/choose-right.png') no-repeat center center;
     background-size: 100% 100%;
 }
 .schoose .left-add{
     position: absolute;
-    left: 0.08rem;
-    top: 0.23rem;
+    left: 0.02rem;
+    top: 0.18rem;
     width: 0.22rem;
     height: 0.23rem;
     background: url('../img/four/add.png') no-repeat center center;
@@ -43,8 +68,8 @@ body,html{
 }
 .schoose .left-score{
     position: absolute;
-    left: 0.3rem;
-    top: 0.23rem;
+    left: 0.24rem;
+    top: 0.2rem;
     width: 0.2rem;
     height: 0.3rem;
     font-size: 0.3rem;
@@ -54,8 +79,8 @@ body,html{
 }
 .schoose .left-reduce{
     position: absolute;
-    left: 0.48rem;
-    top: 0.23rem;
+    right: 0.02rem;
+    top: 0.19rem;
     width: 0.22rem;
     height: 0.23rem;
     background: url('../img/four/reduce.png') no-repeat center center;
@@ -64,8 +89,8 @@ body,html{
 
 .schoose .right-add{
     position: absolute;
-    right: 0.48rem;
-    top: 0.23rem;
+    left: 0.02rem;
+    top: 0.18rem;
     width: 0.22rem;
     height: 0.23rem;
     background: url('../img/four/add.png') no-repeat center center;
@@ -73,8 +98,8 @@ body,html{
 }
 .schoose .right-score{
     position: absolute;
-    right: 0.3rem;
-    top: 0.23rem;
+    right: 0.23rem;
+    top: 0.2rem;
     width: 0.2rem;
     height: 0.3rem;
     font-size: 0.3rem;
@@ -84,8 +109,8 @@ body,html{
 }
 .schoose .right-reduce{
     position: absolute;
-    right: 0.08rem;
-    top: 0.23rem;
+    right: 0.02rem;
+    top: 0.19rem;
     width: 0.22rem;
     height: 0.23rem;
     background: url('../img/four/reduce.png') no-repeat center center;
