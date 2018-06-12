@@ -48,23 +48,25 @@ $(function(){
     $('.submit-con').on('click',function(){
         let userName = $('#userName').val();
         let tel = $('#tel').val();
+        let score = $('.left-score').html() + ':' + $('.right-score').html();
         if(tel.length < 11){
             alert('请您完善电话号码！');
         }else{
-            let str = `姓名：${userName}\n电话：${tel}\n确定提交吗？`
-            alert(str);
+            $.ajax({
+                url: 'http://talian.wang:8080/man/update',
+                type: 'get',
+                dataType: 'json',
+                data: {
+                    name: userName,
+                    phoneNum: tel,
+                    score: score
+                },
+                success: function(result){
+                    if(result){
+                        alert('提交成功');
+                    }
+                }
+            });
         }
-        // $.ajax({
-        //     url: '',
-        //     type: 'post',
-        //     dataType: 'json',
-        //     data: {
-        //         userName: userName,
-        //         tel: tel
-        //     },
-        //     success: function(result){
-
-        //     }
-        // });
     });
 });
