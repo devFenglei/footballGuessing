@@ -80,7 +80,8 @@ $(function(){
         if(tel.length < 11){
             alert('请您完善电话号码！');
         }else{
-            Ajax.get('http://120.78.68.167:8080/man/update?name='+userName+'&phoneNum='+tel+'&score='+score+'t='+new Date().getTime(),function(result){
+            alert('http://120.78.68.167:8080/man/update?name='+userName+'&phoneNum='+tel+'&score='+score+'&t='+new Date().getTime());
+            Ajax.get('http://120.78.68.167:8080/man/update?name='+userName+'&phoneNum='+tel+'&score='+score+'&t='+new Date().getTime(),function(result){
                 console.log(result);
                 alert('提交成功');
             });
