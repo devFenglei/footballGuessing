@@ -89,7 +89,7 @@ $(function(){
                 url: 'http://120.78.68.167:8080/man/update?t='+new Date().getTime(),
                 type: 'get',
                 dataType: 'json',
-                async: true,
+                async: false,
                 data: {
                     name: userName,
                     phoneNum: tel,
