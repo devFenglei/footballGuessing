@@ -53,7 +53,7 @@ $(function(){
             alert('请您完善电话号码！');
         }else{
             $.ajax({
-                url: 'http://talian.wang:8080/man/update',
+                url: 'http://120.78.68.167:8080/man/update',
                 type: 'get',
                 dataType: 'json',
                 data: {
