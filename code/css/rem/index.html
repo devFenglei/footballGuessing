@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>rem</title>
   <style>
     html{
       /* 62.5和10px是等价的 */
@@ -75,7 +75,7 @@
     <li>都能适配所有的手机设备，对于pad，网易与淘宝都会跳转到pc页面，不再使用触屏版的页面</li>
     <li>都需要动态设置html的font-size</li>
     <li>布局时各元素的尺寸值都是根据设计稿标注的尺寸计算出来，由于html的font-size是动态调整的，所以能够做到不同分辨率下页面布局呈现等比变化</li>
-    <li>容器元素的font-size都不用rem，需要额外地对font-size做媒介查询</li>
+    <li>容器元素的font-size都不用rem，需要额外地对font-size做媒介查询，因为可能某些尺寸字体计算出来可能不是整数，会模糊</li>
     <li>都能应用于尺寸不同的设计稿，只要按以上总结的方法去用就可以了</li>
   </ul>
   <p>不同点:</p>
