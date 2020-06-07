@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 1200px;
+            height: 900px;
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://upload-images.jianshu.io/upload_images/7338972-aadd2c6aa3826bd6" alt="node事件环">
+    </div>
+</body>
+<script>
+    /*
+        node事件环 队列清空后 会转到下一个队列
+
+        timers阶段  定时器的回调
+        poll阶段    io的回调，走完后会等待，等定时器到达时间后，执行对应的回调
+        check阶段   检查是否有setImmediate
+
+        当阶段切换时，会执行微任务
+        开始时，在主线程，第一次执行，微任务会先执行一次
+    */
+</script>
+</html>
