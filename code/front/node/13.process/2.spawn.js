@@ -14,4 +14,12 @@ let child1 = spawn('node', ['1.js', 'a', 'b'], {
 
 child1.stdout.on('data', (data) => {
   console.log(data.toString())
+  // 结果拿到后 传给第二个子进程
+  child2.stdout.write(data.toString())
 })
+
+let child2 = spawn('node', ['2.js'], {
+  cwd: path.join(__dirname, 'test')
+  // stdio不写默认就是pipe
+})
+

@@ -1,2 +1,3 @@
-process.stdout.write('hello')
-process.stderr.write('world')
+process.argv.slice(2).forEach(item => {
+    process.send(item)
+})
