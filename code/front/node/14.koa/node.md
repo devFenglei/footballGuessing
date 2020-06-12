@@ -5,4 +5,5 @@
 > 底层是 http
 
 ## 安装koa
-- koa比较小（没有很强大的功能）第三方中间件（static,views,）
+- koa比较小（没有很强大的功能）第三方中间件（static,views,cookie,session,route）
+- 
