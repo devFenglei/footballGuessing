@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .test{
+      width: 800px;
+      height: 500px;
+      border: 1px solid #ddd;
+      background: #eee;
+      margin: 50px auto;
+      line-height: 500px;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="test"></div>
+</body>
+<script>
+  const div = document.querySelector('.test')
+  let num = 0
+  function print() {
+    num += 1
+    div.innerHTML = num
+  }
+  /*
+    防抖：指触发事件后n秒内函数只能执行一次，如果在n秒内又触发了事件，则会重新计算函数执行时间
+  */
+  // 防抖非立即执行版
+  // function debunce(fn, delay) {
+  //   let timer = null
+  //   return function() {
+  //     let context = this
+  //     let args = arguments
+
+  //     if (timer) {
+  //       clearTimeout(timer)
+  //     }
+  //     timer = setTimeout(() => {
+  //       fn.apply(context, args)
+  //       timer = null
+  //     }, delay)
+  //   }
+  // }
+
+  // 防抖立即执行版
+  // function debunce(fn, delay) {
+  //   let timer = null
+  //   let isFirst = true
+  //   return function() {
+  //     let context = this
+  //     let args = arguments
+
+  //     if (timer) {
+  //       clearTimeout(timer)
+  //     }
+  //     if (isFirst) {
+  //       fn.apply(context, args)
+  //       isFirst = false
+  //     } else {
+  //       timer = setTimeout(() => {
+  //         fn.apply(context, args)
+  //         timer = null
+  //       }, delay)
+  //     }
+  //   }
+  // }
+
+  // 结合可配置版防抖 isFirst 是否立即执行标识
+  // function debunce(fn, delay, isFirst) {
+  //   let timer = null
+  //   return function() {
+  //     let context = this
+  //     let args = arguments
+
+  //     if (timer) {
+  //       clearTimeout(timer)
+  //     }
+  //     if (isFirst) {
+  //       fn.apply(context, args)
+  //       isFirst = false
+  //     } else {
+  //       timer = setTimeout(() => {
+  //         fn.apply(context, args)
+  //         timer = null
+  //       }, delay)
+  //     }
+  //   }
+  // }
+
+  // let bindFn = debunce(print, 1000, true)
+  // div.addEventListener('mousemove', bindFn)
+  // div.removeEventListener('mouseout', bindFn)
+
+  // 节流：指连续触发事件但在n秒中只执行一次函数
+  // 节流时间戳版
+  // function throttle(fn, delay) {
+  //   let preTime = 0
+  //   return function() {
+  //     let context = this
+  //     let args = arguments
+  //     if (Date.now() - preTime > delay) {
+  //       fn.apply(context, arguments)
+  //       preTime = Date.now()
+  //     }
+  //   }
+  // }
+
+  // 节流延时器版
+  // function throttle(fn, delay) {
+  //   let timer = null
+  //   return function() {
+  //     let context = this
+  //     let args = arguments
+  //     if (!timer) {
+  //       timer = setTimeout(() => {
+  //         fn.apply(context, arguments)
+  //         timer = null
+  //       }, delay)
+  //     }
+  //   }
+  // }
+
+  // 节流结合版 falg标识 1 时间戳版 2 延时器版
+  function throttle(fn, delay, flag) {
+    let preTime = 0
+    let timer = null
+    return function() {
+      let context = this
+      let args = arguments
+      if (flag === 1) {
+        if (Date.now() - preTime > delay) {
+          fn.apply(context, arguments)
+          preTime = Date.now()
+        }
+      } else if (flag === 2) {
+        if (!timer) {
+          timer = setTimeout(() => {
+            fn.apply(context, arguments)
+            timer = null
+          }, delay)
+        }
+      }
+    }
+  }
+
+  let bindFn = throttle(print, 1000, 1)
+  div.addEventListener('mousemove', bindFn)
+  div.removeEventListener('mouseout', bindFn)
+</script>
+</html>
